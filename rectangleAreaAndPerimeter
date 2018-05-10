@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class rectangleAreaAndPerimeter {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        double x1 = Double.parseDouble(input.nextLine());
+        double y1 = Double.parseDouble(input.nextLine());
+        double x2 = Double.parseDouble(input.nextLine());
+        double y2 = Double.parseDouble(input.nextLine());
+        double a = x1 - x2;
+        double b = y1 - y2;
+        if (a < 0){
+            a = -1 * a;
+        }
+        if (b < 0){
+            b = -1 * b;
+        }
+        double area = a * b;
+        double perimeter = 2 * (a + b);
+        System.out.println(area);
+        System.out.println(perimeter);
+    }
+}
