@@ -1,0 +1,10 @@
+import java.util.Scanner;
+
+public class celsiusToFharenheit {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        double C = Double.parseDouble(input.nextLine());
+        double F = (C * 1.8) + 32;
+        System.out.printf("%.2f",F);
+    }
+}
