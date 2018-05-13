@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class tailoringWorkshop {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int quantity = Integer.parseInt(input.nextLine());
+        double lenght = Double.parseDouble(input.nextLine());
+        double width = Double.parseDouble(input.nextLine());
+        double pokrivka = quantity * (lenght + 0.6) * (width + 0.6);
+        double kare = quantity * (lenght / 2) * (lenght/ 2);
+        double dollarSum = pokrivka * 7 + kare * 9;
+        double levaSum = dollarSum * 1.85;
+        System.out.printf("%.2f USD%n",dollarSum);
+        System.out.printf("%.2f BGN",levaSum);
+    }
+}
