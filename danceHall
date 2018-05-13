@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class danceHall {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        double lenght = Double.parseDouble(input.nextLine());
+        double width = Double.parseDouble(input.nextLine());
+        double wardrobe = Double.parseDouble(input.nextLine());
+        double wardrobeArea = wardrobe * wardrobe;
+        double hallArea = lenght * width;
+        double bench = hallArea / 10;
+        double area = hallArea - bench - wardrobeArea;
+        double people = Math.floor(area / 0.704);
+        System.out.printf("%.0f",people);
+    }
+}
