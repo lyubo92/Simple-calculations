@@ -1,0 +1,23 @@
+import javafx.scene.transform.Scale;
+
+import java.util.Scanner;
+
+public class campany {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int days = Integer.parseInt(input.nextLine());
+        int chefs = Integer.parseInt(input.nextLine());
+        int cakes = Integer.parseInt(input.nextLine());
+        int goffrets = Integer.parseInt(input.nextLine());
+        int pancakes = Integer.parseInt(input.nextLine());
+        int cakesSum = cakes * 45;
+        double goffretsSum = goffrets * 5.80;
+        double pancakesSum = pancakes * 3.20;
+        double daySum = cakesSum + goffretsSum + pancakesSum;
+        double chefsSum = daySum * chefs;
+        double wholeSum = chefsSum * days;
+        double expenses = wholeSum / 8;
+        double total = wholeSum - expenses;
+        System.out.printf("%.2f",total);
+    }
+}
