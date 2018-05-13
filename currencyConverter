@@ -1,0 +1,42 @@
+import java.sql.DatabaseMetaData;
+import java.util.Scanner;
+
+public class currencyConverter {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        double sum = Double.parseDouble(input.nextLine());
+        String inputCurrency = input.nextLine();
+        String outputCurrency = input.nextLine();
+        double lev = 1;
+        double dollar = 1.79549 * lev;
+        double euro = 1.95583 * lev;
+        double pound = 2.53405 * lev;
+        double result = 0;
+        double outputResult = 0;
+        if (inputCurrency.equals("BGN")){
+            result = sum * lev;
+        }
+        if (inputCurrency.equals("USD")){
+            result = sum * dollar;
+        }
+        if (inputCurrency.equals("EUR")){
+            result = sum * euro;
+        }
+        if (inputCurrency.equals("GBP")){
+            result = sum * pound;
+        }
+        if (outputCurrency.equals("BGN")){
+            outputResult = result / lev;
+        }
+        if (outputCurrency.equals("USD")){
+            outputResult = result / dollar;
+        }
+        if (outputCurrency.equals("EUR")){
+            outputResult = result / euro;
+        }
+        if (outputCurrency.equals("GBP")){
+            outputResult = result / pound;
+        }
+        System.out.printf("%.2f",outputResult);
+    }
+}
