@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class alcoholMarket {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        double whiskeyPrice = Double.parseDouble(input.nextLine());
+        double beer = Double.parseDouble(input.nextLine());
+        double wine = Double.parseDouble(input.nextLine());
+        double rakia = Double.parseDouble(input.nextLine());
+        double whiskey = Double.parseDouble(input.nextLine());
+        double rakiaPrice = whiskeyPrice / 2;
+        double winePrice = rakiaPrice - (0.4 * rakiaPrice);
+        double beerPrice = rakiaPrice - (0.8 * rakiaPrice);
+        double whiskeySum = whiskey * whiskeyPrice;
+        double beerSum = beer * beerPrice;
+        double wineSum = wine * winePrice;
+        double rakiaSum = rakia * rakiaPrice;
+        double total = whiskeySum + wineSum + beerSum + rakiaSum;
+        System.out.printf("%.2f",total);
+    }
+}
