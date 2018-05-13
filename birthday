@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class birthday {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        double legth = Double.parseDouble(input.nextLine());
+        double width = Double.parseDouble(input.nextLine());
+        double height = Double.parseDouble(input.nextLine());
+        double procent = Double.parseDouble(input.nextLine());
+        double volume = (legth * width * height) / 1000;
+        double minusVolume = (procent/100) * volume;
+        double liters = volume - minusVolume;
+        System.out.printf("%.3f", liters);
+    }
+}
